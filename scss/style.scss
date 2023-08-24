@@ -177,3 +177,52 @@ body.active {
 	transition: all 0.3s ease 0s;
 	transform: translateX(0);
 }
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	// .hero_logo-block
+	&_logo-block {
+	}
+	// .hero_logo
+	&_logo {
+	}
+	// .hero_title-block
+	&_title-block {
+		margin-top: 41px;
+	}
+	// .hero_title
+	&_title {
+		color: #ff7575 !important;
+		font-family: "Recursive", sans-serif;
+		font-size: 71px;
+		font-style: italic;
+		font-weight: 400;
+		line-height: normal;
+		@media (max-width: 768px) {
+			font-size: 30px;
+		}
+	}
+	// .hero_sub-title-block
+	&_sub-title-block {
+		margin-top: 17px;
+	}
+	// .hero_sub-title
+	&_sub-title {
+		color: #fff;
+		font-family: "Poppins", sans-serif;
+		font-size: 29px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		@media (max-width: 768px) {
+			font-size: 18px;
+		}
+	}
+	// .hero__container
+	&__container {
+	}
+}
