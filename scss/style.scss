@@ -334,5 +334,8 @@ body.active {
 			background-color: rgba(0, 0, 0, 0);
 			transform: translateY(-5px);
 		}
+		&:active {
+			transform: scale(0.9);
+		}
 	}
 }
