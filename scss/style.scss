@@ -309,9 +309,10 @@ body.active {
 	&__container {
 		display: flex;
 		gap: 41px;
-		align-items: center;
+		align-items: start;
 		@media (max-width: 768px) {
 			justify-content: space-between;
+			align-items: center;
 		}
 	}
 }
