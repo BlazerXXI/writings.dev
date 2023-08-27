@@ -25,9 +25,11 @@
 			<header class="header">
 				<div class="header__container _container">
 					<div class="header_logo" id="logo"><a href="/">writings.dev</a></div>
-					<btn class="header_mobile-menu">
-						<span class="mobile-menu_line"></span>
-					</btn>
+					<div class="header_menu">
+						<btn class="header_mobile-menu">
+							<span class="mobile-menu_line"></span>
+						</btn>
+					</div>
 					<nav class="header_nav">
 						<a class="header_link hover_link" href="#">categories</a>
 						<a class="header_link hover_link" href="#">articles</a>
@@ -57,50 +59,250 @@
 						</div>
 					</div>
 				</section>
-				<section class="filter_menu">
-					<div class="filter__container _container">
-						<div class="filter_icons">
+				<section class="category_menu">
+					<div class="category__container _container">
+						<div class="category_icons">
 							<img
 								src="./img/Grid.svg"
 								alt=""
-								class="filter_icon hover_link"
+								class="category_icon hover_link"
 								width="24"
 								height="24"
 							/>
 							<img
 								src="./img/List.svg"
 								alt=""
-								class="filter_icon hover_link"
+								class="category_icon hover_link"
 								width="24"
 								height="24"
 							/>
 						</div>
-						<ul class="filter_list">
-							<li class="filter_item">
+						<ul class="category_list">
+							<li class="category_item">
 								<a href="#" class="hover_link"> JavaScript </a>
 							</li>
-							<li class="filter_item">
+							<li class="category_item">
 								<a href="#" class="hover_link"> DevOps </a>
 							</li>
-							<li class="filter_item">
+							<li class="category_item">
 								<a href="#" class="hover_link"> Cloud </a>
 							</li>
-							<li class="filter_item">
+							<li class="category_item">
 								<a href="#" class="hover_link"> Terraform </a>
 							</li>
-							<li class="filter_item">
+							<li class="category_item">
 								<a href="#" class="hover_link"> Architecture </a>
 							</li>
-							<li class="filter_item">
+							<li class="category_item">
 								<a href="#" class="hover_link"> Scalability </a>
 							</li>
-							<li class="filter_item">
+							<li class="category_item">
 								<a href="#" class="hover_link"> Explainers </a>
 							</li>
 						</ul>
-						<div class="filter_buttons">
-							<button class="btn btn_primary filter_button">Filter</button>
-						</div>
+						<select class="category_buttons">
+							<option selected class="btn btn_primary category_button">
+								Filter
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> JavaScript </a>
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> DevOps </a>
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> Cloud </a>
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> Terraform </a>
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> Architecture </a>
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> Scalability </a>
+							</option>
+							<option class="category_item">
+								<a href="#" class="hover_link"> Explainers </a>
+							</option>
+						</select>
+					</div>
+				</section>
+				<section class="articles">
+					<div class="articles__container _container">
+						<ul class="articles_list">
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+							<li class="articles_item article">
+								<img
+									class="article_img"
+									src="./img/articles/image1.jpg"
+									alt="articles image"
+								/>
+								<h3 class="article_title">
+									Build continuous integration pipelines with GerHub Actions
+								</h3>
+								<h4 class="article_subtitle">
+									GitHub actions provide a really powerful way to integrate
+									continuous integration and delivery into your applications.
+								</h4>
+								<div class="article_creator">
+									<p class="article_date">June 24, 2022</p>
+									<i class="article_dot"></i>
+									<p class="article_author">DevOps</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</section>
 			</main>
