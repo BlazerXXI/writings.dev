@@ -303,8 +303,13 @@ body.active {
 			font-style: italic;
 			font-weight: 400;
 		}
-		&:last-child {
+		&-text-opacity {
 			position: relative;
+			color: #909090 !important;
+			font-family: "Recursive", sans-serif;
+			font-size: 27px;
+			font-style: italic;
+			font-weight: 400;
 			&:after {
 				content: "";
 				position: absolute;
