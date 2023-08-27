@@ -35,6 +35,8 @@ body {
 	position: relative;
 	// .header_mobile-menu
 	&_mobile-menu {
+		background: rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
 		position: fixed;
 		z-index: 10;
 		top: 38px;
@@ -45,7 +47,6 @@ body {
 		height: 30px;
 		align-items: center;
 		justify-content: center;
-		
 		@media (max-width: 768px) {
 			display: flex;
 		}
@@ -271,7 +272,7 @@ body.active {
 	}
 	// .category_buttons
 	&_buttons {
-		color: #4d4d4d !important;
+		color: #fff !important;
 		background-color: #00000060;
 		border-top: 3px solid #ff7575;
 		cursor: pointer;
@@ -283,7 +284,7 @@ body.active {
 
 		&:hover {
 			transition: all 0.3s ease 0s;
-			color: white !important;
+			opacity: 0.8;
 		}
 		@media (max-width: 768px) {
 			display: block;
