@@ -24,7 +24,7 @@
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__container _container">
-					<div class="header_logo" id="logo"><a href="/">writings.dev</a></div>
+					<div class="header_logo" id="logo"><a href="./">writings.dev</a></div>
 					<div class="header_menu">
 						<btn class="header_mobile-menu">
 							<span class="mobile-menu_line"></span>
@@ -304,17 +304,42 @@
 					</div>
 				</section>
 				<section class="pagination">
-					<a href="#" class="prev-page">Previous page</a>
-					<a href="#" class="current-page active">1</a>
-					<a href="#">2</a>
-					<a href="#">3</a>
-					<a href="#">4</a>
-					<a href="#">5</a>
-					<a href="#" class="prev-page">Next page</a>
+					<div class="pagination__container _container">
+						<div>
+							<a href="#" class="pagination_link prev-page">Previous</a>
+						</div>
+						<div class="pagination_pages">
+							<a href="#" class="pagination_link">1</a>
+							<a href="#" class="pagination_link current-page active">2</a>
+							<a href="#" class="pagination_link">3</a>
+							<a href="#" class="pagination_link">4</a>
+							<a href="#" class="pagination_link">5</a>
+						</div>
+						<div>
+							<a href="#" class="pagination_link prev-page">Next</a>
+						</div>
+					</div>
 				</section>
 			</main>
 			<footer class="footer">
-				<div class="footer__container _container"></div>
+				<div class="footer__container _container">
+					<div class="footer__col">
+						<a class="footer__logo" href="./">writings.dev</a>
+						<p class="footer__naming footer__blue">by @kamrify</p>
+					</div>
+					<div class="footer__col">
+						<a class="footer__social-link footer__blue" href="#">
+							<img
+								class="footer__social-image"
+								src="./img/footer/twitter.svg"
+								width="20"
+								height="16"
+								alt="Twitter logo"
+							/>
+							Follow @writingsdev
+						</a>
+					</div>
+				</div>
 			</footer>
 		</div>
 		<div class="lock"></div>
