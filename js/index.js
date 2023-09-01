@@ -59,8 +59,32 @@ function handleCategoryLinkClick(event) {
 
 	const clickedCategory = event.target.innerText; // Получаем значение категории
 	if (clickedCategory) {
-		localStorage.setItem("category", clickedCategory); // Устанавливаем значение в localStorage
-		updateSelectedOption(clickedCategory); // Обновляем активный элемент в select
+		const isLinkActive = event.target.classList.contains("link-active");
+
+		if (isLinkActive) {
+			// Если текущая ссылка уже активна, снимаем класс и отображаем все элементы
+			event.target.classList.remove("link-active");
+
+			categoryValue = ""; // Сбрасываем значение категории
+			localStorage.setItem("category", categoryValue);
+		} else {
+			localStorage.setItem("category", clickedCategory); // Устанавливаем значение в localStorage
+			categoryValue = clickedCategory;
+			updateSelectedOption(categoryValue); // Обновляем активный элемент в select
+			event.target.classList.add("link-active");
+		}
+
+		updateArticleVisibility(); // Обновить видимость статей
+
+		categoryLinks.forEach((link) => {
+			// Удаление класса 'link-active' у всех ссылок
+			link.classList.remove("link-active");
+			// Добавляем обработчик для каждой ссылки
+			link.addEventListener("click", handleCategoryLinkClick);
+		});
+
+		// Добавление класса 'link-active' к кликнутой ссылке
+		event.target.classList.add("link-active");
 	}
 }
 // Добавляем обработчик для каждой ссылки
@@ -70,6 +94,7 @@ categoryLinks.forEach((link) => {
 });
 // Инициализация активного элемента при загрузке страницы
 updateSelectedOption(categoryValue);
+updateArticleVisibility();
 
 categorySelect.addEventListener("change", () => {
 	categoryValue = categorySelect.value;
@@ -77,6 +102,23 @@ categorySelect.addEventListener("change", () => {
 	updateSelectedOption(categoryValue);
 });
 
+// JavaScript: Дополненный код для отображения/скрытия статей
+function updateArticleVisibility() {
+	const articles = document.querySelectorAll(".article");
+
+	articles.forEach((article) => {
+		const authorElement = article.querySelector(".article_author");
+		const author = authorElement.textContent.trim(); // Получаем текст автора статьи
+
+		if (!categoryValue || author === categoryValue) {
+			article.style.display = "block"; // Показать статью, если автор совпадает или categoryValue пустой
+		} else {
+			article.style.display = "none"; // Скрыть статью, если автор не совпадает
+		}
+	});
+}
+
+// mobileMenu
 mobileMenu.addEventListener("click", () => {
 	mobileMenu.classList.toggle("active");
 	body.classList.toggle("active");

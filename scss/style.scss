@@ -309,6 +309,7 @@ body.active {
 			font-style: italic;
 			font-weight: 400;
 		}
+		// category_item-text-opacity
 		&-text-opacity {
 			position: relative;
 			color: #909090 !important;
@@ -535,10 +536,15 @@ img {
 		}
 	}
 }
+.category_link {
+	transition: all 0.3s ease 0s;
+}
 .link-active {
+	transition: all 0.3s ease 0s;
 	color: #ff7575 !important;
 	font-weight: 700;
 	&:before {
+		transition: all 0.3s ease 0s;
 		content: "";
 		background-color: #ff7575;
 		display: block;
