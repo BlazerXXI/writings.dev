@@ -26,14 +26,14 @@
 				<div class="header__container _container">
 					<div class="header_logo" id="logo"><a href="./">writings.dev</a></div>
 					<div class="header_menu">
-						<btn class="header_mobile-menu">
+						<button class="header_mobile-menu">
 							<span class="mobile-menu_line"></span>
-						</btn>
+						</button>
 					</div>
 					<nav class="header_nav">
-						<a class="header_link hover_link" href="#">categories</a>
-						<a class="header_link hover_link" href="#">articles</a>
-						<a class="header_link hover_link" href="#">about</a>
+						<a class="header_link hover_link" href="#categories">categories</a>
+						<a class="header_link hover_link" href="#articles">articles</a>
+						<a class="header_link hover_link" href="./about">about</a>
 					</nav>
 				</div>
 			</header>
@@ -59,45 +59,45 @@
 						</div>
 					</div>
 				</section>
-				<section class="category_menu">
+				<section id="categories" class="category_menu">
 					<div class="category__container _container">
 						<div class="category_icons">
 							<img
 								src="./img/Grid.svg"
 								alt=""
-								class="category_icon hover_link"
+								class="category_icon hover_link category_grid"
 								width="24"
 								height="24"
 							/>
 							<img
 								src="./img/List.svg"
 								alt=""
-								class="category_icon hover_link"
+								class="category_icon hover_link category_line"
 								width="24"
 								height="24"
 							/>
 						</div>
 						<ul class="category_list">
 							<li class="category_item">
-								<a href="#" class="hover_link"> JavaScript </a>
+								<a href="#" class="hover_link category_link"> JavaScript </a>
 							</li>
 							<li class="category_item">
-								<a href="#" class="hover_link"> DevOps </a>
+								<a href="#" class="hover_link category_link"> DevOps </a>
 							</li>
 							<li class="category_item">
-								<a href="#" class="hover_link"> Cloud </a>
+								<a href="#" class="hover_link category_link"> Cloud </a>
 							</li>
 							<li class="category_item">
-								<a href="#" class="hover_link"> Terraform </a>
+								<a href="#" class="hover_link category_link"> Terraform </a>
 							</li>
 							<li class="category_item">
-								<a href="#" class="hover_link"> Architecture </a>
+								<a href="#" class="hover_link category_link"> Architecture </a>
 							</li>
 							<li class="category_item">
-								<a href="#" class="hover_link"> Scalability </a>
+								<a href="#" class="hover_link category_link"> Scalability </a>
 							</li>
 							<li class="category_item">
-								<a href="#" class="hover_link">
+								<a href="#" class="hover_link category_link">
 									<span class="category_item-text-opacity">Explainers</span>
 								</a>
 							</li>
@@ -130,7 +130,7 @@
 						</select>
 					</div>
 				</section>
-				<section class="articles">
+				<section id="articles" class="articles">
 					<div class="articles__container _container">
 						<ul class="articles_list">
 							<li class="articles_item article">
