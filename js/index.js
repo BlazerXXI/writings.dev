@@ -55,40 +55,25 @@ function updateSelectedOption(selectedValue) {
 updateSelectedOption(categoryValue);
 // Обработчик клика по ссылке
 function handleCategoryLinkClick(event) {
-	event.preventDefault(); // Предотвращаем стандартное действие перехода по ссылке
+	// Предотвращаем стандартное действие перехода по ссылке
+	event.preventDefault();
 
-	const clickedCategory = event.target.innerText; // Получаем значение категории
+	// Получаем значение категории
+	const clickedCategory = event.target.innerText;
+	// Проверяем значение категории
 	if (clickedCategory) {
-		const isLinkActive = event.target.classList.contains("link-active");
-
+		const isLiknClass = event.target.classList;
+		// Переменная активной категории
+		let isLinkActive = isLiknClass.contains("link-active");
 		if (isLinkActive) {
-			// Если текущая ссылка уже активна, снимаем класс и отображаем все элементы
-			event.target.classList.remove("link-active");
-
-			categoryValue = ""; // Сбрасываем значение категории
-			localStorage.setItem("category", categoryValue);
+			return;
 		} else {
-			localStorage.setItem("category", clickedCategory); // Устанавливаем значение в localStorage
 			categoryValue = clickedCategory;
-			updateSelectedOption(categoryValue); // Обновляем активный элемент в select
-			event.target.classList.add("link-active");
 		}
-
 		updateArticleVisibility(); // Обновить видимость статей
-
-		categoryLinks.forEach((link) => {
-			// Удаление класса 'link-active' у всех ссылок
-			link.classList.remove("link-active");
-			// Добавляем обработчик для каждой ссылки
-			link.addEventListener("click", handleCategoryLinkClick);
-		});
-
-		// Добавление класса 'link-active' к кликнутой ссылке
-		event.target.classList.add("link-active");
 	}
 }
 // Добавляем обработчик для каждой ссылки
-
 categoryLinks.forEach((link) => {
 	link.addEventListener("click", handleCategoryLinkClick);
 });
