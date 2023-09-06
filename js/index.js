@@ -83,8 +83,13 @@ updateArticleVisibility();
 
 categorySelect.addEventListener("change", () => {
 	categoryValue = categorySelect.value;
-	localStorage.setItem("category", categoryValue);
-	updateSelectedOption(categoryValue);
+
+	if (categoryValue == "All") {
+		localStorage.removeItem("category");
+	} else {
+		localStorage.setItem("category", categoryValue);
+		updateSelectedOption(categoryValue);
+	}
 });
 
 // JavaScript: Дополненный код для отображения/скрытия статей
