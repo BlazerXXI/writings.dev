@@ -53,24 +53,27 @@ function updateSelectedOption(selectedValue) {
 	}
 }
 updateSelectedOption(categoryValue);
-// Обработчик клика по ссылке
 function handleCategoryLinkClick(event) {
-	// Предотвращаем стандартное действие перехода по ссылке
 	event.preventDefault();
 
-	// Получаем значение категории
 	const clickedCategory = event.target.innerText;
-	// Проверяем значение категории
+
 	if (clickedCategory) {
-		const isLiknClass = event.target.classList;
-		// Переменная активной категории
-		let isLinkActive = isLiknClass.contains("link-active");
+		const isLinkClass = event.target.classList;
+		const isLinkActive = isLinkClass.contains("link-active");
+
+		categoryLinks.forEach((link) => {
+			link.classList.remove("link-active");
+		});
+
 		if (isLinkActive) {
-			return;
+			categoryValue = "All"; // Если ссылка уже активна, устанавливаем categoryValue в "All"
+			updateSelectedOption(categoryValue);
 		} else {
 			categoryValue = clickedCategory;
+			event.target.classList.add("link-active"); // Добавляем класс "link-active" к выбранной ссылке
 		}
-		updateArticleVisibility(); // Обновить видимость статей
+		updateArticleVisibility();
 	}
 }
 // Добавляем обработчик для каждой ссылки

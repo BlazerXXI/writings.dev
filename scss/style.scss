@@ -271,6 +271,9 @@ body.active {
 		gap: 36px;
 		width: 100%;
 		flex-wrap: wrap;
+		@media (max-width: 1200px) {
+			justify-content: center;
+		}
 		@media (max-width: 768px) {
 			display: none;
 		}
