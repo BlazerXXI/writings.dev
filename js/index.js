@@ -87,12 +87,9 @@ updateArticleVisibility();
 categorySelect.addEventListener("change", () => {
 	categoryValue = categorySelect.value;
 
-	if (categoryValue == "All") {
-		localStorage.removeItem("category");
-	} else {
-		localStorage.setItem("category", categoryValue);
-		updateSelectedOption(categoryValue);
-	}
+	localStorage.setItem("category", categoryValue);
+	updateSelectedOption(categoryValue);
+	updateArticleVisibility();
 });
 
 // JavaScript: Дополненный код для отображения/скрытия статей
@@ -105,6 +102,8 @@ function updateArticleVisibility() {
 
 		if (!categoryValue || author === categoryValue) {
 			article.style.display = "block"; // Показать статью, если автор совпадает или categoryValue пустой
+		} else if (categoryValue === "All") {
+			article.style.display = "block"; // Показать статью, если categoryValue === "All"
 		} else {
 			article.style.display = "none"; // Скрыть статью, если автор не совпадает
 		}
