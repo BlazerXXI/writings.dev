@@ -35,15 +35,16 @@ body {
 	position: relative;
 	// .header_mobile-menu
 	&_mobile-menu {
-		background: rgba(0, 0, 0, 0.6);
+		border-radius: 50%;
+		background: #00000020;
 		position: fixed;
 		z-index: 10;
 		top: 38px;
 		right: 20px;
 		display: none;
 		cursor: pointer;
-		width: 30px;
-		height: 30px;
+		width: 40px;
+		height: 40px;
 		align-items: center;
 		justify-content: center;
 		@media (max-width: 768px) {
